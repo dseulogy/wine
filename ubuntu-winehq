@@ -1,0 +1,35 @@
+sudo dpkg --add-architecture i386 
+
+Download and add the repository key:
+
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+
+Add the repository:
+For this version: 	Use this command:
+Ubuntu 20.04 	sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+Ubuntu 19.10 	sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ eoan main'
+Ubuntu 18.04
+
+Linux Mint 19.x
+	sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+Ubuntu 16.04
+
+Linux Mint 18.x
+	sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
+
+Update packages:
+
+sudo apt update
+
+Then install one of the following packages:
+Stable branch 	
+
+sudo apt install --install-recommends winehq-stable
+
+Development branch 	
+
+sudo apt install --install-recommends winehq-devel
+
+Staging branch 	
+
+sudo apt install --install-recommends winehq-staging
